@@ -1,0 +1,44 @@
+name: 每日打卡
+description: 每天学习后花 1 分钟打卡（填完提交再关闭 = 完成打卡）
+title: "[\U0001F4DA 打卡] "
+labels: ["stage-1", "daily-log"]
+body:
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 当前阶段
+      options:
+        - stage-1 地基
+        - stage-2 旅游实战
+        - stage-3 听力浸泡
+        - stage-4 流利输出
+    validations:
+      required: true
+  - type: textarea
+    id: learned
+    attributes:
+      label: 今日学了
+      placeholder: 看了哪一课/哪段视频，新词几个
+    validations:
+      required: true
+  - type: input
+    id: handwriting
+    attributes:
+      label: 手写词数
+      placeholder: 如：10 词 + 3 句
+    validations:
+      required: true
+  - type: textarea
+    id: immersion
+    attributes:
+      label: 浸泡内容
+      placeholder: 看了/听了什么，几分钟
+    validations:
+      required: true
+  - type: textarea
+    id: sentences
+    attributes:
+      label: 造句
+      placeholder: 当天 3 个句子（日文+中文），发 AI 批改后抄进来
+    validations:
+      required: true
